@@ -13,6 +13,8 @@ class PostItem extends StatelessWidget {
     required this.postImage,
     required this.likes,
     required this.caption,
+    
+    // required this.tarjeta
   });
 
   final String username;
