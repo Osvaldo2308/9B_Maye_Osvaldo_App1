@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '/widgets/iconbuttons.dart';
+// import '/widgets/iconbuttons.dart';
 
 void main() => runApp(const formulario());
 
@@ -29,12 +29,8 @@ class _formularioState extends State<formulario> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Instagram'),
+          title: const Text('Iniciar sesion'),
           backgroundColor: Colors.purple,
-          actions: const [
-            iconbuttons(),
-            buttonicons(),
-          ],
         ),
         body: Container(
           padding: const EdgeInsets.all(15),
@@ -88,6 +84,12 @@ class _formularioState extends State<formulario> {
                       }
                       if (value.length < 8) {
                         return 'La contraseña debe tener al menos 8 caracteres';
+                      }
+                      if (!RegExp(r'[0-9]').hasMatch(value)) {
+                        return 'La contraseña debe contener al menos un número';
+                      }
+                      if (!RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value)) {
+                        return 'La contraseña debe contener al menos un carácter especial';
                       }
                       return null;
                     },

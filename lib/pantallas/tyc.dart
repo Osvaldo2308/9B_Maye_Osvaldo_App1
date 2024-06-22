@@ -10,7 +10,7 @@ class tyc extends StatelessWidget {
         title: const Text('Términos y Condiciones'),
         backgroundColor: Colors.purple,
       ),
-      body: SingleChildScrollView(
+      body:const SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
